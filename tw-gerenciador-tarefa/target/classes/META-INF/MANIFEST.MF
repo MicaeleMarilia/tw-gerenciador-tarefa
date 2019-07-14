@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: tw-gerenciador-tarefa
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: micaele.m.alves
+Implementation-Vendor-Id: br.com.treinamento
+Build-Jdk: 1.8.0_211
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/tw-gerenciador-tarefa
+Created-By: Maven Integration for Eclipse
+
