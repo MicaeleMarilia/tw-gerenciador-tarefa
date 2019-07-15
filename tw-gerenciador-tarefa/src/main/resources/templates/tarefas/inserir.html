@@ -7,32 +7,49 @@
 </head>
 <body>
 	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
-	<h3>Inclusão de nova tarefa</h3>
-	<form class="form-horizontal" action="/tarefas/inserir" method="post" th:object="${tarefa}">
+	<div class="container">
+		<h3>Inclusão de nova tarefa</h3>
+		<form class="form-horizontal" action="/tarefas/inserir" method="post"
+			th:object="${tarefa}">
 	
-		<div class="row">
-			<div class="form-group col-md-6">
-				<label>Título:</label>
-				<input type="text" required maxlength="50" class="form-control" th:field="*{titulo}">
+			<div class="row">
+				<div class="form-group col-md-6">
+					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('titulo')}">
+						<label th:errors="*{titulo}" class="validation-message"></label>
+					</div>
+					<label>Título:</label> 
+	<!-- 				<input type="text" required maxlength="50" -->
+					<input type="text" 
+						class="form-control" th:field="*{titulo}">
+				</div>
 			</div>
-		</div>
-		
-		<div class="row">
-			<div class="form-group col-md-6">
-				<label>Descrição:</label>
-				<input type="text" maxlength="100" class="form-control" th:field="*{descricao}">
+	
+			<div class="row">
+				<div class="form-group col-md-6">
+					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('descricao')}">
+						<label th:errors="*{descricao}" class="validation-message"></label>
+					</div>
+					<label>Descrição:</label> 
+	<!-- 				<input type="text" maxlength="100" -->
+					<input type="text" 
+						class="form-control" th:field="*{descricao}">
+				</div>
 			</div>
-		</div>
-		
-		<div class="row">
-			<div class="form-group col-md-6">
-				<label>Data de Expiração:</label>
-				<input type="date" class="form-control" th:field="*{dataExpiracao}">
+	
+			<div class="row">
+				<div class="form-group col-md-6">
+					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('dataExpiracao')}">
+						<label th:errors="*{dataExpiracao}" class="validation-message"></label>
+					</div>
+					<label>Data de Expiração:</label> 
+					<input type="date"
+						class="form-control" th:field="*{dataExpiracao}">
+				</div>
 			</div>
-		</div>
-		
-		<button type="submit" class="btn btn-primary">Salvar</button>
-	</form>
+	
+			<button type="submit" class="btn btn-primary">Salvar</button>
+		</form>
+	</div>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
