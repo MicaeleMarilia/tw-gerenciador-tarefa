@@ -11,7 +11,7 @@ public class HomeController {
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home/home");
-		mv.addObject("mensagem","Mensagem do Controller!");
+//		mv.addObject("mensagem","Mensagem do Controller!");
 		return mv;
 	}
 
